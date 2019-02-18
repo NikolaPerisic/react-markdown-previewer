@@ -6,9 +6,7 @@ const header = props => {
 	return (
 		<header className={classes.header}>
 			<img src={logo} className={classes.logo} alt="logo" />
-			<p>
-				Edit <code>src/App.js</code> and save to reload.
-			</p>
+			<p>React Markdown Previewer</p>
 			<a
 				className={classes.header_link}
 				href="https://reactjs.org"

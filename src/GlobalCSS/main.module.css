@@ -31,3 +31,23 @@
 		transform: rotate(360deg);
 	}
 }
+
+.Wrapper {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.Editor_textarea {
+	margin: calc(2rem + 5vmin);
+	width: 400px;
+	height: 500px;
+}
+
+.PreviewBox {
+	margin: calc(2rem + 5vmin);
+	width: 400px;
+	height: 500px;
+	border: 1px solid black;
+}
