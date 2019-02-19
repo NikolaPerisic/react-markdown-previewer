@@ -15,7 +15,6 @@ class MarkdownPreviewer extends Component {
 	markupEditHandler = el => {
 		const markupText = el.target.value;
 		this.setState({ markup: markupText });
-		console.log(this.state.markup);
 		return markupText;
 	};
 	render() {
