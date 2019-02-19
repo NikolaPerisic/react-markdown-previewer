@@ -4,7 +4,7 @@ import classes from "../../GlobalCSS/main.module.css";
 const footer = () => {
 	return (
 		<div className={classes.Footer}>
-			<p>by NP 2019</p>
+			<p>by NP &copy; 2019</p>
 		</div>
 	);
 };
