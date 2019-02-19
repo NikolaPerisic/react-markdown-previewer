@@ -6,14 +6,14 @@ const header = props => {
 	return (
 		<header className={classes.header}>
 			<img src={logo} className={classes.logo} alt="logo" />
-			<p>React Markdown Previewer</p>
+			<p>{props.title}</p>
 			<a
 				className={classes.header_link}
-				href="https://reactjs.org"
+				href="https://github.github.com/gfm/"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				Learn React
+				Github gfm spec
 			</a>
 		</header>
 	);

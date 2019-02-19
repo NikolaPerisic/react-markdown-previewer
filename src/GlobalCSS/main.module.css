@@ -21,6 +21,8 @@
 
 .header_link {
 	color: #61dafb;
+	padding-left: 1rem;
+	text-decoration: none;
 }
 
 @keyframes App-logo-spin {
@@ -31,28 +33,75 @@
 		transform: rotate(360deg);
 	}
 }
-
+/*
+#576574
+*/
 .Wrapper {
+	position: fixed;
+	width: 100%;
+	height: 92%;
+	overflow: auto;
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
 	justify-content: center;
+	background: #c2e59c; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#64b3f4,
+		#c2e59c
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#64b3f4,
+		#c2e59c
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.Editor_textarea {
-	margin: calc(2rem + 5vmin);
-	width: 400px;
-	height: 500px;
-}
-
+.Editor_textarea,
 .PreviewBox {
-	margin: calc(2rem + 5vmin);
-	width: 400px;
-	height: 500px;
+	margin: 2rem;
+	width: 40vw;
+	height: 75vh;
+	font-size: 1rem;
+	resize: none;
 	border: 1px solid black;
+	outline: none;
+	padding: 1rem;
+	overflow: auto;
+	background-color: #f1f2f6;
+	border-radius: 5px;
+	-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.75);
 }
 
 .Output {
-	padding: 0;
-	margin: 0;
+	margin: 0 auto;
+}
+
+.Output img {
+	width: 50%;
+	height: 100px;
+}
+
+@media (max-width: 1100px) {
+	.Editor_textarea,
+	.PreviewBox {
+		width: 75vw;
+		height: 35vh;
+		margin: 1rem;
+	}
+}
+
+.Footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	max-height: auto;
+	font-size: calc(10px + 2vmin);
+	background-color: red;
+	color: white;
+	text-align: center;
 }

@@ -5,7 +5,11 @@ import ReactMarkdown from "react-markdown";
 const preview = props => {
 	return (
 		<div className={classes.PreviewBox}>
-			<ReactMarkdown source={props.outputMarkup} className={classes.Output} />
+			<ReactMarkdown
+				id="preview"
+				source={props.outputMarkup}
+				className={classes.Output}
+			/>
 		</div>
 	);
 };

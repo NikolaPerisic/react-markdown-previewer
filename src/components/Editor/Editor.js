@@ -6,6 +6,7 @@ const editor = props => {
 		<div>
 			<textarea
 				type="text"
+				id="editor"
 				className={classes.Editor_textarea}
 				defaultValue={props.text}
 				onChange={props.editText}
