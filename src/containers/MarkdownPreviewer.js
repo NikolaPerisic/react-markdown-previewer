@@ -8,12 +8,12 @@ import Aux from "../Aux/Aux";
 class MarkdownPreviewer extends Component {
 	state = {
 		headerText: "Header Text",
-		placeholder: "Lorem Ipsum Dolor Sit Amet..."
+		markup: "# This is a header\n\nAnd this is a paragraph"
 	};
 	markupEditHandler = el => {
 		const markupText = el.target.value;
-		this.setState({ placeholder: markupText });
-		console.log(this.state.placeholder);
+		this.setState({ markup: markupText });
+		console.log(this.state.markup);
 		return markupText;
 	};
 	render() {
@@ -21,11 +21,8 @@ class MarkdownPreviewer extends Component {
 			<Aux>
 				<Header />
 				<div className={classes.Wrapper}>
-					<Editor
-						text={this.state.placeholder}
-						editText={this.markupEditHandler}
-					/>
-					<Preview outputMarkup={this.state.placeholder} />
+					<Editor text={this.state.markup} editText={this.markupEditHandler} />
+					<Preview outputMarkup={this.state.markup} />
 				</div>
 			</Aux>
 		);

@@ -1,10 +1,11 @@
 import React from "react";
 import classes from "../../GlobalCSS/main.module.css";
+import ReactMarkdown from "react-markdown";
 
 const preview = props => {
 	return (
 		<div className={classes.PreviewBox}>
-			<p>{props.outputMarkup}</p>
+			<ReactMarkdown source={props.outputMarkup} className={classes.Output} />
 		</div>
 	);
 };
