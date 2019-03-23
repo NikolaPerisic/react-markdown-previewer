@@ -8,27 +8,30 @@ import Aux from "../Aux/Aux";
 import Markup from "../assets/markup/markup";
 
 class MarkdownPreviewer extends Component {
-	state = {
-		headerText: "React Markdown Previewer",
-		markup: Markup
-	};
-	markupEditHandler = el => {
-		const markupText = el.target.value;
-		this.setState({ markup: markupText });
-		return markupText;
-	};
-	render() {
-		return (
-			<Aux>
-				<Header title={this.state.headerText} />
-				<div className={classes.Wrapper}>
-					<Editor text={this.state.markup} editText={this.markupEditHandler} />
-					<Preview outputMarkup={this.state.markup} />
-				</div>
-				<Footer />
-			</Aux>
-		);
-	}
+    state = {
+        headerText: "React Markdown Previewer",
+        markup: Markup
+    };
+    markupEditHandler = el => {
+        const markupText = el.target.value;
+        this.setState({ markup: markupText });
+        return markupText;
+    };
+    render() {
+        return (
+            <Aux>
+                <Header title={this.state.headerText} />
+                <div className={classes.Wrapper}>
+                    <Editor
+                        text={this.state.markup}
+                        editText={this.markupEditHandler}
+                    />
+                    <Preview outputMarkup={this.state.markup} />
+                </div>
+                <Footer />
+            </Aux>
+        );
+    }
 }
 
 export default MarkdownPreviewer;
